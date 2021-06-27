@@ -1,0 +1,21 @@
+[
+  {
+    "blogDate": "22/05/2011",
+    "blogTitle": "CSS is great",
+    "blogDescription": "CSS is a styling tool",
+    "user_id": 2
+  },
+  {
+    "blogDate": "02/08/2011",
+    "blogTitle": "HTML details",
+    "blogDescription": "HTML stands for HyperText Markup Language",
+    "user_id": 1
+  },
+  {
+    "blogAuthor": "Richo",
+    "blogDate": "06/09/2010",
+    "blogTitle": "Javascript",
+    "blogDescription": "A programming language",
+    "user_id": 1
+  }
+]

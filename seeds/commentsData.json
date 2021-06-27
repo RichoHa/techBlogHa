@@ -1,0 +1,20 @@
+[
+  {
+    "commentDate": "22/05/2011",
+    "commentDescription": "CSS is a styling tool",
+    "user_id": 2,
+    "blog_id": 1
+  },
+  {
+    "commentDate": "02/08/2011",
+    "commentDescription": "HTML stands for HyperText Markup Language",
+    "user_id": 1,
+    "blog_id": 2
+  },
+  {
+    "commentDate": "06/09/2010",
+    "commentDescription": "A programming language",
+    "user_id": 1,
+    "blog_id": 2
+  }
+]
