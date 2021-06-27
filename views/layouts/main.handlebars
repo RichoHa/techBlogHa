@@ -4,33 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
-  <link rel="stylesheet" href="/css/jass.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>TechBlog</title>
 </head>
 
-<body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      User Registry
-    </h1>
-    <!-- TODO: Add a comment describing the functionality of this helper -->
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
+<body class="flex flex-col">
+  <header class="flex flex-row flex-wrap font-bold justify-between text-blue-900 bg-gray-400 mb-8">
+    <a href="/home" class="text-4xl">The Tech Blog</a>
+    <nav class="flex flex-row flex-wrap items-center space-x-6 text-2xl font-bold">
+      <a href="/Dash"> Dashboard</a>
+      {{#if logged_in}}
+      <a href="/logout"> Logout</a>
+      {{else}}
+      <a href="/login"> Login</a>
+      {{/if}}
     </nav>
-    {{/if}}
   </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
 
-  <!-- TODO: Add a comment describing the functionality of this helper -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+  <div class="flex flex-col items-center"></div>
+  {{{Body}}}
+  </div>
+
 </body>
+
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
 
 </html>
