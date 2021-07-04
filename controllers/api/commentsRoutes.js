@@ -19,7 +19,9 @@ router.post('/:id', async (req, res) => {
       commentDescription: req.body.commentBlog,
       blog_id: parseInt(BlogId),
       user_id: req.session.user_id,
+
     });
+    res.status(200).send('Comments Added');
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
