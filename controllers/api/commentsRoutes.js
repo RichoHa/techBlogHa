@@ -13,13 +13,6 @@ router.post('/:id', async (req, res) => {
 
   dateCommented = dd + '/' + mm + '/' + yyyy;
 
-  console.log(`--------dateCommented = ${dateCommented}------`)
-  console.log(`--------req.body.commentDescription = ${req.body.commentBlog}------`)
-  console.log(`--------BlogId = ${BlogId}------`)
-  console.log(`--------BlogId = ${typeof BlogId}------`)
-  console.log(`--------req.session.user_id = ${req.session.user_id}------`)
-  console.log(`--------req.session.user_id = ${typeof req.session.user_id}------`)
-
   try {
     await Comments.create({
       commentDate: dateCommented,
