@@ -1,0 +1,40 @@
+{{#each blogs as |blog| }}
+<a class="w-full border-4 border-gray-400 text-blue-900 text-2xl mb-4" href="blog/{{blog.id}}">
+  <div class="flex flex-row flex-wrap justify-between bg-gray-400 font-semibold">
+    <h1>{{blog.blogTitle}}</h1>
+    <p>Posted by {{user.name}} on {{blog.blogDate}}</p>
+  </div class="font-medium">
+  <p>{{blog.blogDescription}}</p>
+</a>
+{{/each}}
+
+<h1>Comments</h1>
+{{#each comments as |comment| }}
+<div class="w-6/12 border-4 border-gray-400 text-blue-900 text-2xl mb-4">
+  <h1 class="flex flex-row flex-wrap justify-between bg-gray-400 font-semibold">Posted by {{user.name}} on
+    {{comment.commentDate}}</h1>
+  <p>{{comment.commentDescription}}</p>
+</div>
+{{/each}}
+<h1>Add Comment</h1>
+
+<div class="w-6/12 border-4  flex items-center">
+  <form class="comment-form w-full flex flex-col items-center p-1 rounded-lg ">
+    <div class="w-full mb-2 flex-col gap-y-0.5">
+      <input
+        class="w-full min-w-full align-top break-all h-20 px-4 mb-2 bg-gray-100 border-gray-400 text-gray-700 placeholder-gray-600 border rounded-lg "
+        id="commentBlog" type="text">
+    </div>
+
+    <div class="flex items-center justify-between">
+      <button
+        class="bg-gray-600 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+        type="submitComments">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+</div>
+
+<script src="/js/comment.js"></script>
